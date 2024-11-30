@@ -1,0 +1,16 @@
+
+1. Wyświetl wszystkie dane z tabeli
+
+2. Napisz zapytanie, które wyświetli tylko kolumny Name i Email dla wszystkich rekordów.
+
+3. Wyświetl dane wszystkich osób, które mają więcej niż 30 lat.
+
+4. Wyświetl wszystkie dane dla osób o imieniu "John".
+
+5. Wyświetl wszystkie rekordy z tabeli posortowane według kolumny Age w kolejności malejącej.
+
+6. Wyświetl dane wszystkich osób, których adres e-mail zawiera słowo "example".
+
+7. Oblicz, ile osób ma mniej niż 25 lat.
+
+8. Wyświetl dane osób, które dołączyły między 1 stycznia 2023 roku a 31 grudnia 2023 roku.
