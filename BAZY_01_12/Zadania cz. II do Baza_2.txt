@@ -1,0 +1,75 @@
+Znajdź:
+
+1. Znajdź wszystkie pytania z kategorii "programowanie".
+
+2. Wyświetl treść i poprawną odpowiedź na pytania zadane w roku 2010.
+
+3. Pokaż wszystkie pytania, które mają poprawną odpowiedź "c".
+
+4. Znajdź pytania dotyczące kategorii "multimedia i grafika" z roku 2008.
+
+5. Wyświetl pytania, które mają w treści słowo "komputer".
+
+6. Pokaż wszystkie pytania posortowane według roku w kolejności rosnącej.
+
+7. Wyświetl pięć najstarszych pytań z bazy danych.
+
+8. Znajdź wszystkie pytania z kategorii "systemy operacyjne i sieci", posortowane malejąco po roku.
+
+9. Policz, ile pytań znajduje się w bazie danych.
+
+10. Znajdź rok, w którym zadano najwięcej pytań.
+
+11. Policz liczbę pytań w każdej kategorii.
+
+12. Oblicz średni rok zadawania pytań w kategorii "programowanie".
+
+13. Wyświetl wszystkie pytania, które zostały zadane w roku 2005.
+
+14. Znajdź wszystkie pytania, których poprawną odpowiedzią jest "b".
+
+15. Pokaż pytania z kategorii "urzadzenia techniki komp.", które zostały zadane w latach 2010–2015.
+
+16. Wyświetl wszystkie pytania, które zostały zadane przed rokiem 2000.
+
+17. Znajdź pytania, które mają w treści słowo "sieć".
+
+18. Pokaż wszystkie pytania posortowane alfabetycznie według kategorii.
+
+19. Wyświetl pytania, które mają poprawną odpowiedź "d", posortowane od najnowszych do najstarszych.
+
+20. Znajdź pięć najnowszych pytań w bazie.
+
+21. Wyświetl tylko treść i rok dla wszystkich pytań z kategorii "programowanie".
+
+22. Pokaż kategorię i poprawną odpowiedź dla pytań zadanych po 2015 roku.
+
+23. Wyświetl treść i kategorię dla pytań, w których poprawną odpowiedzią jest "c".
+
+24. Znajdź wszystkie pytania zadane w latach 2005, 2006 lub 2007.
+
+25. Pokaż pytania, które należą do kategorii "programowanie" lub "multimedia i grafika".
+
+26. Wyświetl pytania, które nie zostały zadane w roku 2010.
+
+27. Znajdź pytania, w których poprawną odpowiedzią jest "a" i kategoria to "systemy operacyjne i sieci".
+
+28. Pokaż pytania, które mają kategorię inną niż "urzadzenia techniki komp." i zostały zadane po roku 2000.
+
+29. Wyświetl pierwsze 3 pytania z bazy.
+
+30. Pokaż 10 ostatnich pytań posortowanych według roku (od najnowszych).
+
+31. Znajdź 5 pytań, które mają poprawną odpowiedź "b", posortowane alfabetycznie po kategorii.
+
+32. Wyświetl 7 pytań zadanych w roku 2008.
+
+33. Policz, ile pytań należy do kategorii "programowanie".
+
+34. Policz, ile pytań zostało zadanych przed rokiem 2010.
+
+35. Znajdź liczbę pytań, których poprawną odpowiedzią jest "d".
+
+36. Policz, ile pytań zawiera słowo "algorytm" w treści.
+
+37. Znajdź liczbę pytań zadanych w każdej kategorii. (proste grupowanie)
