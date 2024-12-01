@@ -1,0 +1,17 @@
+1. Wyświetl wszystkie dane z tabeli.
+
+2. Wyświetl tylko kolumnę Name wszystkich rekordów.
+
+3. Wyświetl dane wszystkich osób, które mają więcej niż 45 lat.
+
+4. Wyświetl dane osoby o imieniu "Alice Johnson.
+
+5. Wyświetl dane wszystkich osób, których wiek wynosi dokładnie 25 lat.
+
+6. Wyświetl wszystkie rekordy, posortowane według kolumny JoinDate w kolejności rosnącej.
+
+7. Wyświetl dane wszystkich osób, które dołączyły po 1 stycznia 2023 roku.
+
+8. Policz, ile osób ma więcej niż 40 lat.
+
+9. Wyświetl dane osób, których adres e-mail kończy się na "@example.com".
