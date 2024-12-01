@@ -1,0 +1,13 @@
+1. Wyświetl dane osób, których imiona zaczynają się na literę "J".
+2. Wyświetl dane wszystkich osób posortowane według daty dołączenia w kolejności rosnącej.
+3. Policz, ile osób ma wiek większy niż 30 lat.
+4. Zaktualizuj wiek osoby o imieniu "Jack Turner" na 34 lata. (wykorzystaj do tego polecenie UPDATE)
+5. Usuń rekordy osób, które mają dokładnie 20 lat. (wykorzystaj do tego polecenie DELETE).
+6. Oblicz średni wiek wszystkich osób w tabeli. (wykorzystaj do tego funkcję AVG)
+7. Zaktualizuj adres e-mail osoby o imieniu "John Doe" na "john.doe@newdomain.com".
+8. Wyświetl dane osób, które mają wiek pomiędzy 25 a 35 lat.
+9. Wyświetl dane wszystkich osób, posortowane według wieku w kolejności malejącej.
+10. Wyświetl dane osób, których imię to "Alice" lub "Bob".
+11. Oblicz, ile osób dołączyło przed 1 stycznia 2023 roku.
+12. Wyświetl dane osób, które mają adres e-mail zaczynający się od "alice".
+13. Policz, ile osób ma więcej niż 30 lat, ale nie zawiera słowa "example" w adresie e-mail.
