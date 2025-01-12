@@ -1,0 +1,10 @@
+1. Wyświetl tytuły książek, które były zamawiane więcej niż jeden raz.
+2. Wyświetl wszystkich klientów, którzy nie dokonali żadnych zamówień.
+3. Pokaż klientów, którzy zamówili książki o cenie powyżej 50 zł.
+4. Wyświetl książki i liczbę zamówień, posortowane malejąco.
+5. Pokaż książki zamówione przez więcej niż jednego klienta.
+6. Pokaż klientów, którzy zamówili książki droższe niż 100 zł.
+7. Znajdź najczęściej zamawianą książkę.
+8. Pokaż klienta z największą liczbą zamówień.
+9. Pokaż wszystkie zamówienia posortowane według daty.
+10. Pokaż klientów, którzy nie zamówili żadnej książki po 2020 roku.
