@@ -1,0 +1,66 @@
+-- Tworzenie bazy danych
+CREATE DATABASE IF NOT EXISTS SampleDB;
+USE SampleDB;
+
+-- Tworzenie tabeli
+CREATE TABLE Users (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100),
+    Age INT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Wstawianie rekordów
+INSERT INTO Users (FirstName, LastName, Email, Age) VALUES 
+('John', 'Doe', 'john.doe@example.com', 28),
+('Jane', 'Smith', 'jane.smith@example.com', 34),
+('Michael', 'Brown', 'michael.brown@example.com', 45),
+('Emily', 'Davis', 'emily.davis@example.com', 22),
+('Daniel', 'Johnson', 'daniel.johnson@example.com', 30),
+('Sophia', 'Garcia', 'sophia.garcia@example.com', 29),
+('Matthew', 'Martinez', 'matthew.martinez@example.com', 31),
+('Olivia', 'Hernandez', 'olivia.hernandez@example.com', 27),
+('James', 'Lopez', 'james.lopez@example.com', 33),
+('Isabella', 'Wilson', 'isabella.wilson@example.com', 25),
+('David', 'Anderson', 'david.anderson@example.com', 40),
+('Emma', 'Taylor', 'emma.taylor@example.com', 24),
+('Benjamin', 'Thomas', 'benjamin.thomas@example.com', 37),
+('Mia', 'Moore', 'mia.moore@example.com', 26),
+('Christopher', 'Jackson', 'christopher.jackson@example.com', 32),
+('Amelia', 'Martin', 'amelia.martin@example.com', 23),
+('Alexander', 'Lee', 'alexander.lee@example.com', 36),
+('Charlotte', 'Perez', 'charlotte.perez@example.com', 28),
+('Elijah', 'Thompson', 'elijah.thompson@example.com', 38),
+('Harper', 'White', 'harper.white@example.com', 21),
+('Lucas', 'Harris', 'lucas.harris@example.com', 39),
+('Ava', 'Clark', 'ava.clark@example.com', 22),
+('Mason', 'Rodriguez', 'mason.rodriguez@example.com', 35),
+('Sophia', 'Lewis', 'sophia.lewis@example.com', 28),
+('Logan', 'Walker', 'logan.walker@example.com', 34),
+('Evelyn', 'Hall', 'evelyn.hall@example.com', 27),
+('Henry', 'Allen', 'henry.allen@example.com', 30),
+('Liam', 'Young', 'liam.young@example.com', 33),
+('Grace', 'King', 'grace.king@example.com', 29),
+('Jacob', 'Wright', 'jacob.wright@example.com', 32),
+('Ella', 'Scott', 'ella.scott@example.com', 25),
+('Noah', 'Green', 'noah.green@example.com', 31),
+('Abigail', 'Adams', 'abigail.adams@example.com', 28),
+('William', 'Baker', 'william.baker@example.com', 29),
+('Chloe', 'Gonzalez', 'chloe.gonzalez@example.com', 26),
+('Ethan', 'Nelson', 'ethan.nelson@example.com', 30),
+('Lily', 'Carter', 'lily.carter@example.com', 23),
+('Samuel', 'Mitchell', 'samuel.mitchell@example.com', 34),
+('Hannah', 'Perez', 'hannah.perez@example.com', 27),
+('Jack', 'Roberts', 'jack.roberts@example.com', 31),
+('Avery', 'Turner', 'avery.turner@example.com', 29),
+('Sebastian', 'Phillips', 'sebastian.phillips@example.com', 28),
+('Victoria', 'Campbell', 'victoria.campbell@example.com', 32),
+('Jackson', 'Parker', 'jackson.parker@example.com', 36),
+('Zoey', 'Evans', 'zoey.evans@example.com', 24),
+('Julian', 'Edwards', 'julian.edwards@example.com', 35),
+('Ella', 'Collins', 'ella.collins@example.com', 25),
+('Aiden', 'Stewart', 'aiden.stewart@example.com', 26),
+('Natalie', 'Sanchez', 'natalie.sanchez@example.com', 27),
+('Nathan', 'Morris', 'nathan.morris@example.com', 33);
