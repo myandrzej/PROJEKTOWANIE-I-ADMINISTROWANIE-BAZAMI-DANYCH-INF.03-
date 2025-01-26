@@ -1,5 +1,5 @@
 1. Wyświetl wszystkich użytkowników wraz z ich zamówieniami.
-2. Wyświetl wszystkie zamówienia zawierające produkty.
+2. Wyświetl nazwę produktu, datę zamówienia, ilość zamówień.
 3. Wyświetl imię i nazwisko klientów, którzy zamówili produkty z kategorii 'Elektronika'.
 4. Uzyskaj nazwę produktu, datę zamowienia oraz ilość.
 5. Wyświetl pełną listę zamówień, uwzględniając tylko tych użytkowników, którzy dokonali zamówienia.
