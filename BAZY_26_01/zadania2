@@ -10,3 +10,7 @@
 10. Połącz tabelę Produkty i Zamowienia, aby uzyskać listę produktów zamówionych w dniu 1 stycznia 2025.
 11. Połącz tabelę Uzytkownicy i Produkty, aby wyświetlić imiona i nazwiska użytkowników oraz produkty, które zamówili w kategorii 'Meble'.
 12. Połącz tabelę Produkty i Zamowienia, aby uzyskać produkty, które zostały zamówione więcej niż 3 razy.
+13. Wyświetl imię, nazwisko użytkowników, którzy złożyli zamówienie w 2025 roku.
+14. Wyświetl nazwę produktu, datę zamówienia oraz ilość dla produktów z kategorii 'Dom'.
+15.Wyświetl imię, nazwisko oraz nazwy produktów dla użytkowników, którzy mają więcej niż 30 lat.
+16. Wyświetl nazwy produktów i ilość, których cena jest wyższa niż 1000 zł
