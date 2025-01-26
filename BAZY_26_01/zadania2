@@ -1,0 +1,12 @@
+1. Wyświetl wszystkich użytkowników wraz z ich zamówieniami.
+2. Wyświetl wszystkie zamówienia zawierające produkty.
+3. Wyświetl imię i nazwisko klientów, którzy zamówili produkty z kategorii 'Elektronika'.
+4. Uzyskaj nazwę produktu, datę zamowienia oraz ilość.
+5. Wyświetl pełną listę zamówień, uwzględniając tylko tych użytkowników, którzy dokonali zamówienia.
+6. Wyświetl zamówione produkty oraz ich cenę.
+7. Wyświetl imię, nazwisko oraz produkty, które zostały zamówione.
+8. Połącz tabelę Zamowienia i Uzytkownicy, aby wyświetlić użytkowników oraz daty ich zamówień.
+9. Wyświetl użytkowników oraz produkty, które zamówili, posortowane po dacie zamówienia.
+10. Połącz tabelę Produkty i Zamowienia, aby uzyskać listę produktów zamówionych w dniu 1 stycznia 2025.
+11. Połącz tabelę Uzytkownicy i Produkty, aby wyświetlić imiona i nazwiska użytkowników oraz produkty, które zamówili w kategorii 'Meble'.
+12. Połącz tabelę Produkty i Zamowienia, aby uzyskać produkty, które zostały zamówione więcej niż 3 razy.
