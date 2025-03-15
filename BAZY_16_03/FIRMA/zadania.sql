@@ -1,0 +1,15 @@
+-- 1. Wyświetl wszystkich pracowników zatrudnionych po 1 stycznia 2021 roku.
+-- 2. Wyświetl wszystkich pracowników z działu "IT".
+-- 3. Wyświetl imiona i nazwiska wszystkich pracowników, którzy zarabiają więcej niż 8000.
+-- 4. Wyświetl średnią pensję w firmie.
+-- 5. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
+-- 6. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
+-- 7. Znajdź pracowników, którzy pracują w dziale "Marketing" i zarabiają więcej niż 7000.
+-- 8. Wyświetl pracowników, którzy zakończyli pracę nad projektem "Projekt A".
+-- 9. Wyświetl wszystkie projekty, które nie zostały jeszcze zakończone.
+-- 10. Wyświetl najstarszego stażem w firmie pracownika.
+-- 11. Wyświetl dane o pracownikach z działu "IT", którzy zarabiają więcej niż 9000.
+-- 12. Policz pracowników w firmie.
+-- 13. Policz łączną pensję wszystkich pracowników w dziale "Księgowość".
+-- 14. Wyświetl pracowników, którzy mają pensję w przedziale od 7000 do 9000.
+-- 15. Wyświetl średnią pensję w każdym dziale.
