@@ -76,4 +76,14 @@ WHERE dzialy.nazwa_dzialu='Księgowość';
 
 
 -- 14. Wyświetl pracowników, którzy mają pensję w przedziale od 7000 do 9000.
+
+SELECT * FROM pracownicy WHERE pensja BETWEEN 7000 AND 9000;
+
+
 -- 15. Wyświetl średnią pensję w każdym dziale.
+
+
+SELECT dzialy.nazwa_dzialu, AVG(pracownicy.pensja)
+FROM dzialy JOIN pracownicy
+ON dzialy.id_dzialu=pracownicy.id_dzialu
+GROUP BY pracownicy.id_dzialu;
