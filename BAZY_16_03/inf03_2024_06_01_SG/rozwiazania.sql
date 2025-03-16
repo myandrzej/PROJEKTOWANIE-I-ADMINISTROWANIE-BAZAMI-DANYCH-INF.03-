@@ -8,3 +8,6 @@ FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id;
 
 -- Zadanie 3
 SELECT COUNT(*) FROM wycieczki;
+
+-- Zadanie 4
+ALTER TABLE wycieczki ADD COLUMN ocena INT;
