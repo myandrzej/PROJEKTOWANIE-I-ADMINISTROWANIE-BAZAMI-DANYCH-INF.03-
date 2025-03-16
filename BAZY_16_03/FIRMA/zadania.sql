@@ -21,7 +21,12 @@ SELECT FORMAT(AVG(pensja), 2) AS srednia_pensja
 FROM pracownicy;
 
 
--- 5. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
+-- 5. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 3 lata.
+
+SELECT * 
+FROM pracownicy 
+WHERE data_zatrudnienia <= CURDATE() - INTERVAL 3 YEAR;
+
 -- 6. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
 -- 7. Znajdź pracowników, którzy pracują w dziale "Marketing" i zarabiają więcej niż 7000.
 -- 8. Wyświetl pracowników, którzy zakończyli pracę nad projektem "Projekt A".
