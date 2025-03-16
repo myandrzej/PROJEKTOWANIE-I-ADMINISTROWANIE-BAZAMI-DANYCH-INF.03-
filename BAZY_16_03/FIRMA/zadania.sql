@@ -10,7 +10,17 @@ JOIN dzialy ON pracownicy.id_dzialu = dzialy.id_dzialu
 WHERE dzialy.nazwa_dzialu = 'IT';
 
 -- 3. Wyświetl imiona i nazwiska wszystkich pracowników, którzy zarabiają więcej niż 8000.
+
+SELECT imie, nazwisko FROM pracownicy WHERE pensja > 8000;
+
 -- 4. Wyświetl średnią pensję w firmie.
+
+SELECT AVG(pensja) AS srednia_pensja FROM pracownicy;
+
+SELECT FORMAT(AVG(pensja), 2) AS srednia_pensja 
+FROM pracownicy;
+
+
 -- 5. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
 -- 6. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
 -- 7. Znajdź pracowników, którzy pracują w dziale "Marketing" i zarabiają więcej niż 7000.
