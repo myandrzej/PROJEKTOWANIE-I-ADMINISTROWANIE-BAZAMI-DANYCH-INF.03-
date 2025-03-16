@@ -41,6 +41,12 @@ ON pracownicy.id_dzialu = dzialy.id_dzialu
 WHERE dzialy.nazwa_dzialu='Marketing' AND pracownicy.pensja > 7000;
 
 -- 8. Wyświetl pracowników, którzy zakończyli pracę nad projektem "Projekt A".
+
+SELECT * FROM pracownicy
+JOIN projekty
+ON pracownicy.id_pracownika = projekty.id_pracownika
+WHERE projekty.data_zakonczania IS NOT NULL AND projekty.nazwa_projektu='Projekt A';
+
 -- 9. Wyświetl wszystkie projekty, które nie zostały jeszcze zakończone.
 -- 10. Wyświetl najstarszego stażem w firmie pracownika.
 -- 11. Wyświetl dane o pracownikach z działu "IT", którzy zarabiają więcej niż 9000.
