@@ -48,7 +48,16 @@ ON pracownicy.id_pracownika = projekty.id_pracownika
 WHERE projekty.data_zakonczania IS NOT NULL AND projekty.nazwa_projektu='Projekt A';
 
 -- 9. Wyświetl wszystkie projekty, które nie zostały jeszcze zakończone.
+
+SELECT * FROM pracownicy
+JOIN projekty
+ON pracownicy.id_pracownika = projekty.id_pracownika
+WHERE projekty.data_zakonczania IS NULL;
+
 -- 10. Wyświetl najstarszego stażem w firmie pracownika.
+
+SELECT imie, nazwisko, data_zatrudnienia FROM pracownicy ORDER BY data_zatrudnienia LIMIT 1;
+
 -- 11. Wyświetl dane o pracownikach z działu "IT", którzy zarabiają więcej niż 9000.
 -- 12. Policz pracowników w firmie.
 -- 13. Policz łączną pensję wszystkich pracowników w dziale "Księgowość".
