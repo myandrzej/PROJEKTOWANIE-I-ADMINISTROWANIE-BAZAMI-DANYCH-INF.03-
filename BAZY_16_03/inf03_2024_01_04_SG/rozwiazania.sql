@@ -16,4 +16,4 @@ SELECT dataZadania, wpis FROM zadania WHERE MONTH(dataZadania) = 7;
 SELECT miesiac, wpis FROM zadania WHERE wpis LIKE 'S%';
 
 -- Zadanie 5
-UPDATE zadania SET wpis = 'Wycieczka nad morze' WHERE dataZadania = '2020-07-18'
+UPDATE zadania SET wpis = 'Wycieczka nad morze' WHERE dataZadania = '2020-07-18';
