@@ -1,5 +1,14 @@
 -- 1. Wyświetl wszystkich pracowników zatrudnionych po 1 stycznia 2021 roku.
+
+SELECT * FROM pracownicy WHERE data_zatrudnienia > '2021-01-01'; 
+
 -- 2. Wyświetl wszystkich pracowników z działu "IT".
+
+SELECT *
+FROM pracownicy
+JOIN dzialy ON pracownicy.id_dzialu = dzialy.id_dzialu
+WHERE dzialy.nazwa_dzialu = 'IT';
+
 -- 3. Wyświetl imiona i nazwiska wszystkich pracowników, którzy zarabiają więcej niż 8000.
 -- 4. Wyświetl średnią pensję w firmie.
 -- 5. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
