@@ -35,6 +35,11 @@ FROM pracownicy
 WHERE data_zatrudnienia <= CURDATE() - INTERVAL 2 YEAR;
 
 -- 7. Znajdź pracowników, którzy pracują w dziale "Marketing" i zarabiają więcej niż 7000.
+
+SELECT * FROM pracownicy  JOIN dzialy
+ON pracownicy.id_dzialu = dzialy.id_dzialu
+WHERE dzialy.nazwa_dzialu='Marketing' AND pracownicy.pensja > 7000;
+
 -- 8. Wyświetl pracowników, którzy zakończyli pracę nad projektem "Projekt A".
 -- 9. Wyświetl wszystkie projekty, które nie zostały jeszcze zakończone.
 -- 10. Wyświetl najstarszego stażem w firmie pracownika.
