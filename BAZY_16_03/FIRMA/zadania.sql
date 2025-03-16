@@ -28,6 +28,12 @@ FROM pracownicy
 WHERE data_zatrudnienia <= CURDATE() - INTERVAL 3 YEAR;
 
 -- 6. Wyświetl wszystkich pracowników, którzy pracują dłużej niż 2 lata.
+
+
+SELECT * 
+FROM pracownicy 
+WHERE data_zatrudnienia <= CURDATE() - INTERVAL 2 YEAR;
+
 -- 7. Znajdź pracowników, którzy pracują w dziale "Marketing" i zarabiają więcej niż 7000.
 -- 8. Wyświetl pracowników, którzy zakończyli pracę nad projektem "Projekt A".
 -- 9. Wyświetl wszystkie projekty, które nie zostały jeszcze zakończone.
