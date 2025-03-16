@@ -59,6 +59,12 @@ WHERE projekty.data_zakonczania IS NULL;
 SELECT imie, nazwisko, data_zatrudnienia FROM pracownicy ORDER BY data_zatrudnienia LIMIT 1;
 
 -- 11. Wyświetl dane o pracownikach z działu "IT", którzy zarabiają więcej niż 9000.
+
+SELECT * FROM pracownicy  JOIN dzialy
+ON pracownicy.id_dzialu = dzialy.id_dzialu
+WHERE dzialy.nazwa_dzialu='IT' AND pracownicy.pensja > 9000;
+
+
 -- 12. Policz pracowników w firmie.
 -- 13. Policz łączną pensję wszystkich pracowników w dziale "Księgowość".
 -- 14. Wyświetl pracowników, którzy mają pensję w przedziale od 7000 do 9000.
