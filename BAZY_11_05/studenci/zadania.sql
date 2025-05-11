@@ -1,7 +1,20 @@
-Zadanie 1: Ilu studentów jest na każdym roku studiów?
-Zadanie 2: Znajdź wszystkich studentów z adresami e-mail z domeny edu.pl.
-Zadanie 3: Znajdź najczęściej występujące imię.
-Zadanie 4: Zaktualizuj rok_studiow na 1 dla wszystkich studentów z @gmail.com.
+-- Zadanie 1: Ilu studentów jest na każdym roku studiów?
+SELECT rok_studiow, COUNT(*) FROM studenci GROUP BY rok_studiow;
+
+-- Zadanie 2: Znajdź wszystkich studentów z adresami e-mail z domeny edu.pl.
+SELECT * FROM studenci
+WHERE email LIKE '%@edu.pl';
+
+-- Zadanie 3: Znajdź najczęściej występujące imię.
+SELECT imie, COUNT(*) AS ile_razy
+FROM studenci
+GROUP BY imie
+ORDER BY ile_razy DESC
+LIMIT 1;
+
+-- Zadanie 4: Zaktualizuj rok_studiow na 1 dla wszystkich studentów z @gmail.com.
+
+
 Zadanie 5: Usuń studentów z interia.pl, którzy są na 5 roku.
 Zadanie 6: Stwórz widok gmail_studenci dla studentów z gmail.com.
 Zadanie 7: Ile unikalnych nazwisk znajduje się w bazie?
