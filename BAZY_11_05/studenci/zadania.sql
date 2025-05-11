@@ -96,5 +96,10 @@ ADD COLUMN data_dodania DATE;
 UPDATE studenci
 SET data_dodania = CURRENT_DATE;
 
-Zadanie 19: Wyszukaj studentów, których nazwisko kończy się na "ski" lub "ska"
-Zadanie 20: Usuń kolumnę aktywny z tabeli.
+-- Zadanie 19: Wyszukaj studentów, których nazwisko kończy się na "ski" lub "ska"
+SELECT * FROM studenci
+WHERE nazwisko LIKE '%ski' OR nazwisko LIKE '%ska';
+
+-- Zadanie 20: Usuń kolumnę aktywny z tabeli.
+ALTER TABLE studenci
+DROP COLUMN aktywny;
