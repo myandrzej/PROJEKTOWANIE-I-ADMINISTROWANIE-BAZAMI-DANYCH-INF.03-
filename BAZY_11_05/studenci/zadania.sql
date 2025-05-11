@@ -52,12 +52,43 @@ FROM studenci
 WHERE nazwisko LIKE 'K%'
 GROUP BY rok_studiow;
 
-Zadanie 12: Sprawdź czy w bazie znajdują się studenci, którzy mają takie same nazwisko i imię, np. Adam Adam.
-Zadanie 13: Znajdź studentów, którzy są na 2, 3 lub 4 roku i mają adres w domenie onet.pl.
-Zadanie 14: Dodaj kolumnę "aktywny" (typu BOOLEAN), ustaw domyślnie na 1.
-Zadanie 15: Zmień "aktywny" na 0 dla studentów na 5 roku.
-Zadanie 16: Usuń wszystkich studentów z roku 1, których nazwisko zaczyna się na "Z".
-Zadanie 17: Zmień wszystkie nazwiska na wielkie litery.
+-- Zadanie 12: Sprawdź czy w bazie znajdują się studenci, którzy mają takie same nazwisko i imię, np. Adam Adam.
+SELECT * FROM studenci
+WHERE imie = nazwisko;
+
+-- Zadanie 13: Znajdź studentów, którzy są na 2, 3 lub 4 roku i mają adres e-mail w domenie onet.pl.
+SELECT * FROM studenci
+WHERE rok_studiow IN (2, 3, 4)
+AND email LIKE '%@onet.pl';
+
+-- Zadanie 14: Dodaj kolumnę "aktywny" (typu BOOLEAN), ustaw domyślnie na 1.
+ALTER TABLE studenci
+ADD COLUMN aktywny BOOLEAN DEFAULT 1;
+
+-- Zadanie 15: Zmień "aktywny" na 0 dla studentów na 5 roku.
+UPDATE studenci
+SET aktywny = 0
+WHERE rok_studiow = 5;
+
+-- Zadanie 16: Usuń wszystkich studentów z roku 1, których nazwisko zaczyna się na "Z".
+DELETE FROM studenci
+WHERE rok_studiow = 1 AND nazwisko LIKE 'Z%';
+
+-- Zadanie 17: Zmień wszystkie nazwiska na wielkie litery.
+UPDATE studenci
+SET nazwisko = UPPER(nazwisko);
+
+-- Zamienia na małe
+UPDATE studenci
+SET nazwisko = LOWER(nazwisko);
+
+-- Zamiana tylko pierwszej litery na dużą
+UPDATE studenci
+SET nazwisko = CONCAT(
+UPPER(LEFT(nazwisko, 1)),
+LOWER(SUBSTRING(nazwisko, 2))
+);
+
 Zadanie 18: Dodaj kolumnę data_dodania i ustaw ją na aktualną datę.
 Zadanie 19: Wyszukaj studentów, których nazwisko kończy się na "ski" lub "ska"
 Zadanie 20: Usuń kolumnę aktywny z tabeli.
