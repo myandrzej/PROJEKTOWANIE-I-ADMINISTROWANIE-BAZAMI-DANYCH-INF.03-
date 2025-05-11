@@ -1,0 +1,15 @@
+Zadanie 1.
+SELECT COUNT(*), pensja FROM pracownicy GROUP BY pensja ORDER BY pensja DESC;
+
+-- dodatkowe
+SELECT COUNT(*) AS liczba_pracownikow, GROUP_CONCAT(nazwisko SEPARATOR ',' ) as nazwisko, pensja FROM pracownicy 
+GROUP BY pensja ORDER BY pensja DESC;
+
+Zadanie 2.
+SELECT pracownicy.imie, pracownicy.nazwisko, stanowiska.nazwa FROM pracownicy JOIN stanowiska ON pracownicy.stanowiska_id = stanowiska.id WHERE staz > 10;
+
+Zadanie 3.
+SELECT nazwisko, pensja FROM pracownicy WHERE staz BETWEEN 10 AND 20;
+
+Zadanie 4.
+ALTER TABLE stanowiska ADD COLUMN minPensja INT;
