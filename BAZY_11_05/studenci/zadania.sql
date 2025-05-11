@@ -13,15 +13,45 @@ ORDER BY ile_razy DESC
 LIMIT 1;
 
 -- Zadanie 4: Zaktualizuj rok_studiow na 1 dla wszystkich studentów z @gmail.com.
+UPDATE studenci
+SET rok_studiow = 1
+WHERE email LIKE '%@gmail.com';
 
+-- Zadanie 5: Usuń studentów z interia.pl, którzy są na 5 roku.
+DELETE FROM studenci
+WHERE email LIKE '%@interia.pl' AND rok_studiow = 5;
 
-Zadanie 5: Usuń studentów z interia.pl, którzy są na 5 roku.
-Zadanie 6: Stwórz widok gmail_studenci dla studentów z gmail.com.
-Zadanie 7: Ile unikalnych nazwisk znajduje się w bazie?
-Zadanie 8: Lista studentów, którzy mają to samo nazwisko.
-Zadanie 9: Wybierz studentów, których imię zaczyna się na literę "M".
-Zadanie 10: Znajdź 3 najrzadsze imiona.
-Zadanie 11: Policz liczbę studentów na każdym roku, tylko dla nazwisk zaczynających się na "K".
+-- Zadanie 6: Stwórz widok gmail_studenci dla studentów z gmail.com.
+CREATE VIEW gmail_studenci AS
+SELECT * FROM studenci
+WHERE email LIKE '%@gmail.com';
+
+-- Zadanie 7: Ile unikalnych nazwisk znajduje się w bazie?
+SELECT COUNT(DISTINCT nazwisko) AS liczba_nazwisk
+FROM studenci;
+
+-- Zadanie 8: Lista studentów, którzy mają to samo nazwisko.
+SELECT nazwisko, COUNT(*) AS ile_osob
+FROM studenci
+GROUP BY nazwisko
+HAVING COUNT(*) > 1;
+
+-- Zadanie 9: Wybierz studentów, których imię zaczyna się na literę "M".
+SELECT * FROM studenci
+WHERE imie LIKE 'M%';
+
+-- Zadanie 10: Znajdź 3 najrzadsze imiona.
+SELECT imie, COUNT(*) AS ile
+FROM studenci
+GROUP BY imie
+ORDER BY ile ASC
+LIMIT 3;
+-- Zadanie 11: Policz liczbę studentów na każdym roku, tylko dla nazwisk zaczynających się na "K".
+SELECT rok_studiow, COUNT(*) AS liczba
+FROM studenci
+WHERE nazwisko LIKE 'K%'
+GROUP BY rok_studiow;
+
 Zadanie 12: Sprawdź czy w bazie znajdują się studenci, którzy mają takie same nazwisko i imię, np. Adam Adam.
 Zadanie 13: Znajdź studentów, którzy są na 2, 3 lub 4 roku i mają adres w domenie onet.pl.
 Zadanie 14: Dodaj kolumnę "aktywny" (typu BOOLEAN), ustaw domyślnie na 1.
