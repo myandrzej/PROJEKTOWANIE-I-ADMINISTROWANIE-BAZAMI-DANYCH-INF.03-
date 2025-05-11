@@ -89,6 +89,12 @@ UPPER(LEFT(nazwisko, 1)),
 LOWER(SUBSTRING(nazwisko, 2))
 );
 
-Zadanie 18: Dodaj kolumnę data_dodania i ustaw ją na aktualną datę.
+-- Zadanie 18: Dodaj kolumnę data_dodania i ustaw ją na aktualną datę.
+ALTER TABLE studenci
+ADD COLUMN data_dodania DATE;
+
+UPDATE studenci
+SET data_dodania = CURRENT_DATE;
+
 Zadanie 19: Wyszukaj studentów, których nazwisko kończy się na "ski" lub "ska"
 Zadanie 20: Usuń kolumnę aktywny z tabeli.
