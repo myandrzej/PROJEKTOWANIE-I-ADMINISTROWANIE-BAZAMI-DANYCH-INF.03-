@@ -124,5 +124,11 @@ JOIN oceny ON studenci.id = oceny.student_id
 WHERE oceny.ocena IS NULL;
 
 -- 18. Wyświetl przedmiot, który ma największy rozrzut ocen (MAX - MIN).
+SELECT przedmiot, MAX(ocena) - MIN(ocena) AS rozrzut
+FROM oceny
+GROUP BY przedmiot
+ORDER BY rozrzut DESC
+LIMIT 1;
+
 -- 19. Znajdź studentów, którzy mają przynajmniej jedną ocenę z każdego przedmiotu.
 -- 20. Dla każdego roku studiów podaj średnią ocenę studentów.
