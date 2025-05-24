@@ -1,4 +1,10 @@
 1. Wyświetl wszystkich studentów z kierunku "Informatyka".
+SELECT studenci.imie, studenci.nazwisko
+FROM studenci 
+JOIN kierunki ON 
+studenci.kierunek_id = kierunki.id
+WHERE kierunki.nazwa = 'Informatyka';
+
 2. Znajdź wszystkich studentów, którzy są na 1. roku studiów.
 3. Policz ilu studentów przypisano do każdego kierunku.
 4. Znajdź studentów, którzy mają ocenę 5.0.
