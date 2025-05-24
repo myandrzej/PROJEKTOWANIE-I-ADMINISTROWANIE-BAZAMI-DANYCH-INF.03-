@@ -81,7 +81,17 @@ FROM oceny
 GROUP BY przedmiot
 LIMIT 1;
 
-12. Stwórz wiok o nazwie top_studenci, gdzie znajdą się studenci ze średnią ocen > 4.5.
+-- 12. Stwórz wiok o nazwie top_studenci, gdzie znajdą się studenci ze średnią ocen > 4.5.
+CREATE VIEW top_studenci AS
+SELECT studenci.id, studenci.imie, studenci.nazwisko, ROUND(AVG(oceny.ocena), 2) AS srednia
+FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id
+GROUP BY studenci.id
+HAVING ROUND(AVG(oceny.ocena), 2) > 4.5;
+
+
+
+
 13. Wyświetl liczbę studentów na każdym roku dla danego kierunku.
 14. Wyświetl kierunek, rok studiów oraz średnią na danym roku z danego kierunku.
 15. Znajdź 5 najczęściej ocenianych przedmiotów.
