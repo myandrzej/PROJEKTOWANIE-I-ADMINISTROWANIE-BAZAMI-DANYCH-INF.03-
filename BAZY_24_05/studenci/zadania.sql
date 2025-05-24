@@ -138,3 +138,9 @@ GROUP BY studenci.id
 HAVING COUNT(DISTINCT oceny.przedmiot) = (SELECT COUNT(DISTINCT przedmiot) FROM oceny);
 
 -- 20. Dla każdego roku studiów podaj średnią ocenę studentów.
+SELECT studenci.rok_studiow, ROUND(AVG(oceny.ocena), 2) AS srednia_ocen
+FROM studenci
+JOIN oceny 
+ON studenci.id = oceny.student_id
+GROUP BY studenci.rok_studiow
+ORDER BY studenci.rok_studiow;
