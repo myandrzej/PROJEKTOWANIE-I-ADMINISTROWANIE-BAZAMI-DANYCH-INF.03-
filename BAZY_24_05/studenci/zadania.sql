@@ -96,7 +96,13 @@ JOIN kierunki ON studenci.kierunek_id = kierunki.id
 GROUP BY kierunki.nazwa, studenci.rok_studiow
 ORDER BY kierunki.nazwa, studenci.rok_studiow;
 
-14. Wyświetl kierunek, rok studiów oraz średnią na danym roku z danego kierunku.
+-- 14. Wyświetl kierunek, rok studiów oraz średnią na danym roku z danego kierunku.
+SELECT kierunki.nazwa AS kierunek, studenci.rok_studiow, ROUND(AVG(oceny.ocena), 2) AS srednia FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id 
+JOIN kierunki ON studenci.kierunek_id = kierunki.id 
+GROUP BY kierunki.nazwa, studenci.rok_studiow 
+ORDER BY kierunki.nazwa, studenci.rok_studiow; 
+
 15. Znajdź 5 najczęściej ocenianych przedmiotów.
 16. Wyświetl studentów, którzy mają dokładnie 5 ocen.
 17. Wyświetl wszystkich studentów bez żadnej oceny.
