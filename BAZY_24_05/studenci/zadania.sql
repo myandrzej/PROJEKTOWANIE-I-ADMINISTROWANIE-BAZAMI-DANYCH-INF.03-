@@ -1,15 +1,35 @@
-1. Wyświetl wszystkich studentów z kierunku "Informatyka".
+-- 1. Wyświetl wszystkich studentów z kierunku "Informatyka".
 SELECT studenci.imie, studenci.nazwisko
 FROM studenci 
 JOIN kierunki ON 
 studenci.kierunek_id = kierunki.id
 WHERE kierunki.nazwa = 'Informatyka';
 
-2. Znajdź wszystkich studentów, którzy są na 1. roku studiów.
-3. Policz ilu studentów przypisano do każdego kierunku.
-4. Znajdź studentów, którzy mają ocenę 5.0.
-5. Policz średnią ocenę z każdego przedmiotu.
-6. Wyświetl kierunki wraz z liczbą studentów i posortuj je malejąco.
+-- 2. Znajdź wszystkich studentów, którzy są na 1. roku studiów.
+SELECT imie, nazwisko, rok_studiow
+FROM studenci
+WHERE rok_studiow = 1;
+
+-- 3. Policz ilu studentów przypisano do każdego kierunku.
+SELECT kierunki.nazwa, COUNT(*) AS liczba_studentow
+FROM studenci
+JOIN kierunki ON studenci.kierunek_id = kierunki.id
+GROUP BY kierunki.nazwa;
+
+-- 4. Znajdź studentów, którzy mają ocenę 5.0.
+SELECT DISTINCT studenci.imie, studenci.nazwisko
+FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id
+WHERE oceny.ocena = 5.0;
+
+-- 5. Policz średnią ocenę z każdego przedmiotu.
+SELECT przedmiot, ROUND(AVG(ocena), 2) AS srednia_ocena
+FROM oceny
+GROUP BY przedmiot;
+
+-- 6. Wyświetl kierunki wraz z liczbą studentów i posortuj je malejąco.
+
+
 7. Znajdź studentów ze średnią ocen powyżej 4.0.
 8. Wyświetl trzech studentów z najwyższą średnią ocen.
 9. Wyświetl średnią ocen z "Bazy danych" dla każdego kierunku.
