@@ -34,7 +34,13 @@ JOIN kierunki ON studenci.kierunek_id = kierunki.id
 GROUP BY kierunki.nazwa
 ORDER BY liczba_studentow DESC;
 
-7. Znajdź studentów ze średnią ocen powyżej 4.0.
+-- 7. Znajdź studentów ze średnią ocen powyżej 4.0.
+SELECT studenci.imie, studenci.nazwisko, ROUND(AVG(oceny.ocena), 2) AS srednia
+FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id
+GROUP BY studenci.id
+HAVING AVG(oceny.ocena) > 4.0;
+
 8. Wyświetl trzech studentów z najwyższą średnią ocen.
 9. Wyświetl średnią ocen z "Bazy danych" dla każdego kierunku.
 10. Wyświetl studentów, którzy nigdy nie dostali oceny < 4.0.
