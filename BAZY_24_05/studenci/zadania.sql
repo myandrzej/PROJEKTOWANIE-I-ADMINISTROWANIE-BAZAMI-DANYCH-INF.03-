@@ -48,11 +48,24 @@ JOIN oceny ON studenci.id = oceny.student_id
 GROUP BY studenci.id
 HAVING AVG(oceny.ocena) > 4.0;
 
+-- 8. Wyświetl trzech studentów z najwyższą średnią ocen.
+SELECT studenci.imie, studenci.nazwisko, ROUND(AVG(oceny.ocena), 2) AS srednia
+FROM studenci
+JOIN oceny ON studenci.id = oceny.student_id
+GROUP BY studenci.id
+ORDER BY srednia DESC
+LIMIT 3;
+
+-- 9. Wyświetl średnią ocen z "Bazy danych" dla każdego kierunku.
+SELECT kierunki.nazwa, ROUND(AVG(oceny.ocena), 2) AS srednia
+FROM oceny
+JOIN studenci ON oceny.student_id = studenci.id
+JOIN kierunki ON studenci.kierunek_id = kierunki.id
+WHERE oceny.przedmiot = 'Bazy danych'
+GROUP BY kierunki.nazwa;
 
 
-8. Wyświetl trzech studentów z najwyższą średnią ocen.
-9. Wyświetl średnią ocen z "Bazy danych" dla każdego kierunku.
-10. Wyświetl studentów, którzy nigdy nie dostali oceny < 4.0.
+-- 10. Wyświetl studentów, którzy nigdy nie dostali oceny < 4.0.
 SELECT studenci.imie, studenci.nazwisko, GROUP_CONCAT(oceny.ocena ORDER BY oceny.ocena SEPARATOR ', ') AS oceny 
 FROM studenci JOIN oceny 
 ON oceny.student_id = studenci.id 
