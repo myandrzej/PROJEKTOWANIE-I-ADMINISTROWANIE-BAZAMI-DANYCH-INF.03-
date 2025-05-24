@@ -28,7 +28,11 @@ FROM oceny
 GROUP BY przedmiot;
 
 -- 6. Wyświetl kierunki wraz z liczbą studentów i posortuj je malejąco.
-
+SELECT kierunki.nazwa, COUNT(*) AS liczba_studentow
+FROM studenci 
+JOIN kierunki ON studenci.kierunek_id = kierunki.id
+GROUP BY kierunki.nazwa
+ORDER BY liczba_studentow DESC;
 
 7. Znajdź studentów ze średnią ocen powyżej 4.0.
 8. Wyświetl trzech studentów z najwyższą średnią ocen.
