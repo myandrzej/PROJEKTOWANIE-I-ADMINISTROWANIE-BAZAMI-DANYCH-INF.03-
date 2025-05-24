@@ -131,4 +131,10 @@ ORDER BY rozrzut DESC
 LIMIT 1;
 
 -- 19. Znajdź studentów, którzy mają przynajmniej jedną ocenę z każdego przedmiotu.
+SELECT studenci.imie, studenci.nazwisko
+FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id
+GROUP BY studenci.id
+HAVING COUNT(DISTINCT oceny.przedmiot) = (SELECT COUNT(DISTINCT przedmiot) FROM oceny);
+
 -- 20. Dla każdego roku studiów podaj średnią ocenę studentów.
