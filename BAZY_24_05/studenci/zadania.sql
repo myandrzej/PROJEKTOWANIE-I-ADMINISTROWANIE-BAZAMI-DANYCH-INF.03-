@@ -53,6 +53,15 @@ HAVING AVG(oceny.ocena) > 4.0;
 8. Wyświetl trzech studentów z najwyższą średnią ocen.
 9. Wyświetl średnią ocen z "Bazy danych" dla każdego kierunku.
 10. Wyświetl studentów, którzy nigdy nie dostali oceny < 4.0.
+SELECT studenci.imie, studenci.nazwisko, GROUP_CONCAT(oceny.ocena ORDER BY oceny.ocena SEPARATOR ', ') AS oceny 
+FROM studenci JOIN oceny 
+ON oceny.student_id = studenci.id 
+WHERE studenci.id NOT IN 
+(SELECT oceny.student_id FROM oceny WHERE oceny.ocena < 4.0)
+GROUP BY studenci.id, studenci.imie, studenci.nazwisko 
+ORDER BY studenci.nazwisko, studenci.imie; 
+
+
 11. Wyświetl przedmiot z najniższą średnią ocen.
 12. Stwórz wiok o nazwie top_studenci, gdzie znajdą się studenci ze średnią ocen > 4.5.
 13. Wyświetl liczbę studentów na każdym roku dla danego kierunku.
