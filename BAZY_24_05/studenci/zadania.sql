@@ -103,7 +103,13 @@ JOIN kierunki ON studenci.kierunek_id = kierunki.id
 GROUP BY kierunki.nazwa, studenci.rok_studiow 
 ORDER BY kierunki.nazwa, studenci.rok_studiow; 
 
-15. Znajdź 5 najczęściej ocenianych przedmiotów.
+-- 15. Znajdź 5 najczęściej ocenianych przedmiotów.
+SELECT przedmiot, COUNT(*) AS liczba_ocen
+FROM oceny
+GROUP BY przedmiot
+ORDER BY liczba_ocen DESC
+LIMIT 5;
+
 16. Wyświetl studentów, którzy mają dokładnie 5 ocen.
 17. Wyświetl wszystkich studentów bez żadnej oceny.
 18. Wyświetl przedmiot, który ma największy rozrzut ocen (MAX - MIN).
