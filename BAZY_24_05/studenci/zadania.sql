@@ -121,7 +121,7 @@ HAVING COUNT(oceny.id) = 5;
 SELECT studenci.imie, studenci.nazwisko
 FROM studenci
 JOIN oceny ON studenci.id = oceny.student_id
-WHERE oceny.id IS NULL;
+WHERE oceny.ocena IS NULL;
 
 -- 18. Wyświetl przedmiot, który ma największy rozrzut ocen (MAX - MIN).
 -- 19. Znajdź studentów, którzy mają przynajmniej jedną ocenę z każdego przedmiotu.
