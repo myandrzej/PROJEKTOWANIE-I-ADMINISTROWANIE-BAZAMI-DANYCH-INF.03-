@@ -110,8 +110,14 @@ GROUP BY przedmiot
 ORDER BY liczba_ocen DESC
 LIMIT 5;
 
-16. Wyświetl studentów, którzy mają dokładnie 5 ocen.
-17. Wyświetl wszystkich studentów bez żadnej oceny.
-18. Wyświetl przedmiot, który ma największy rozrzut ocen (MAX - MIN).
-19. Znajdź studentów, którzy mają przynajmniej jedną ocenę z każdego przedmiotu.
-20. Dla każdego roku studiów podaj średnią ocenę studentów.
+-- 16. Wyświetl studentów, którzy mają dokładnie 5 ocen.
+SELECT studenci.imie, studenci.nazwisko, COUNT(oceny.id) AS liczba_ocen
+FROM studenci 
+JOIN oceny ON studenci.id = oceny.student_id
+GROUP BY studenci.id
+HAVING COUNT(oceny.id) = 5;
+
+-- 17. Wyświetl wszystkich studentów bez żadnej oceny.
+-- 18. Wyświetl przedmiot, który ma największy rozrzut ocen (MAX - MIN).
+-- 19. Znajdź studentów, którzy mają przynajmniej jedną ocenę z każdego przedmiotu.
+-- 20. Dla każdego roku studiów podaj średnią ocenę studentów.
