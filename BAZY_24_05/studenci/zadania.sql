@@ -75,7 +75,12 @@ GROUP BY studenci.id, studenci.imie, studenci.nazwisko
 ORDER BY studenci.nazwisko, studenci.imie; 
 
 
-11. Wyświetl przedmiot z najniższą średnią ocen.
+-- 11. Wyświetl przedmiot z najniższą średnią ocen.
+SELECT przedmiot, ROUND(AVG(ocena), 2) AS srednia
+FROM oceny
+GROUP BY przedmiot
+LIMIT 1;
+
 12. Stwórz wiok o nazwie top_studenci, gdzie znajdą się studenci ze średnią ocen > 4.5.
 13. Wyświetl liczbę studentów na każdym roku dla danego kierunku.
 14. Wyświetl kierunek, rok studiów oraz średnią na danym roku z danego kierunku.
