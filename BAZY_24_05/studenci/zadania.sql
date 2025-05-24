@@ -89,10 +89,13 @@ JOIN oceny ON studenci.id = oceny.student_id
 GROUP BY studenci.id
 HAVING ROUND(AVG(oceny.ocena), 2) > 4.5;
 
+-- 13. Wyświetl liczbę studentów na każdym roku dla danego kierunku.
+SELECT kierunki.nazwa AS kierunek, studenci.rok_studiow, COUNT(*) AS liczba
+FROM studenci
+JOIN kierunki ON studenci.kierunek_id = kierunki.id
+GROUP BY kierunki.nazwa, studenci.rok_studiow
+ORDER BY kierunki.nazwa, studenci.rok_studiow;
 
-
-
-13. Wyświetl liczbę studentów na każdym roku dla danego kierunku.
 14. Wyświetl kierunek, rok studiów oraz średnią na danym roku z danego kierunku.
 15. Znajdź 5 najczęściej ocenianych przedmiotów.
 16. Wyświetl studentów, którzy mają dokładnie 5 ocen.
