@@ -96,12 +96,15 @@ SELECT * FROM orders WHERE order_date > '2025-06-15';
 SELECT * FROM customers WHERE email LIKE '%@example.com';
 
 
-Zadanie 19.
-Znajdź produkty, których cena jest pomiędzy 100 a 500.
+-- Zadanie 19. Znajdź produkty, których cena jest pomiędzy 100 a 500.
+SELECT * FROM products WHERE price BETWEEN 100 AND 500;
 
-Zadanie 20.
-Wyświetl 10 ostatnio złożonych zamówień z datą i klientem.
-
+-- Zadanie 20. Wyświetl 10 ostatnio złożonych zamówień z datą i klientem.
+SELECT customers.customer_id, customers.first_name, customers.last_name, COUNT(orders.order_id) AS orders_count
+FROM customers
+JOIN orders ON customers.customer_id = orders.customer_id
+GROUP BY customers.customer_id
+LIMIT 10;
 
 
 
