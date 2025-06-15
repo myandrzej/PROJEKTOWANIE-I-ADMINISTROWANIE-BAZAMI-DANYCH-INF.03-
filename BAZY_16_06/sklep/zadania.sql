@@ -27,6 +27,15 @@ FROM customers
 JOIN orders ON customers.customer_id = orders.customer_id
 WHERE orders.order_date BETWEEN '2025-06-01' AND '2025-06-30';
 
+SELECT customers.customer_id, 
+customers.first_name, 
+customers.last_name, 
+GROUP_CONCAT(DATE(orders.order_date)) AS order_dates
+FROM customers
+JOIN orders ON customers.customer_id = orders.customer_id
+WHERE orders.order_date BETWEEN '2025-06-01' AND '2025-06-30'
+GROUP BY customers.customer_id;
+
 
 Zadanie 6.
 Znajdź 5 najdroższych produktów.
