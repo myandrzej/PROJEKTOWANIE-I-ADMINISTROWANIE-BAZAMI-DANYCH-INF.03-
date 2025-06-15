@@ -67,9 +67,13 @@ GROUP BY order_date
 ORDER BY order_date;
 
 
-Zadanie 11.
-Wyświetl listę zamówień, które mają pozycje produktów o cenie powyżej 1000 zł.
+-- Zadanie 11. Wyświetl listę zamówień, które mają pozycje produktów o cenie powyżej 1000 zł.
+SELECT DISTINCT orders.order_id
+FROM orders
+JOIN order_items ON orders.order_id = order_items.order_id
+WHERE order_items.price > 1000;
 
+  
 Zadanie 12.
 Wypisz klientów, których nazwisko zaczyna się na literę 'K'.
 
