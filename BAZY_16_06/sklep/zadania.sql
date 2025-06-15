@@ -54,6 +54,11 @@ LIMIT 1;
 
 
 Zadanie 9. Wyświetl klientów i sumę wartości ich zamówień.
+SELECT customers.customer_id, customers.first_name, customers.last_name, SUM(orders.total_amount) AS total_spent
+FROM customers
+JOIN orders orders ON customers.customer_id = orders.customer_id
+GROUP BY customers.customer_id;
+
 
 Zadanie 10.
 Pokaż, ile zamówień zostało złożonych w każdym dniu.
