@@ -37,8 +37,9 @@ WHERE orders.order_date BETWEEN '2025-06-01' AND '2025-06-30'
 GROUP BY customers.customer_id;
 
 
-Zadanie 6.
-Znajdź 5 najdroższych produktów.
+-- Zadanie 6. - Znajdź 5 najdroższych produktów.
+SELECT * FROM products ORDER BY price DESC LIMIT 5;
+
 
 Zadanie 7.
 Wyświetl produkty, których stan magazynowy jest mniejszy niż 20.
