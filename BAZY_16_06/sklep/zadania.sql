@@ -60,8 +60,12 @@ JOIN orders orders ON customers.customer_id = orders.customer_id
 GROUP BY customers.customer_id;
 
 
-Zadanie 10.
-Pokaż, ile zamówień zostało złożonych w każdym dniu.
+-- Zadanie 10. Pokaż, ile zamówień zostało złożonych w każdym dniu.
+SELECT order_date, COUNT(*) AS orders_count
+FROM orders
+GROUP BY order_date
+ORDER BY order_date;
+
 
 Zadanie 11.
 Wyświetl listę zamówień, które mają pozycje produktów o cenie powyżej 1000 zł.
