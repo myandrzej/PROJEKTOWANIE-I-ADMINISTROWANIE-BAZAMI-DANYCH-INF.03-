@@ -1,0 +1,32 @@
+Zadanie 1
+Pobierz wszystkich klientów z miasta Warszawa.
+
+
+Zadanie 2
+Pokaż listę wszystkich produktów z ceną większą niż 100.
+
+
+Zadanie 3
+Znajdź wszystkie zamówienia klienta o customer_id = 1.
+
+
+Zadanie 4
+Wyświetl nazwy produktów oraz ich kategorię (nazwa kategorii).
+
+Zadanie 5
+Policz, ile produktów jest w każdej kategorii.
+
+Zadanie 6
+Znajdź klientów, którzy złożyli zamówienia na kwotę większą niż 1000.
+
+Zadanie 7
+Wyświetl zamówienia z datą i sumą kwoty zamówienia.
+
+Zadanie 8
+Pokaż wszystkie pozycje zamówień (order_items) wraz z nazwą produktu.
+
+Zadanie 9
+Wyświetl klientów i liczbę zamówień, jakie złożyli.
+
+Zadanie 10
+Znajdź produkty, których cena jest poniżej średniej ceny wszystkich produktów.
