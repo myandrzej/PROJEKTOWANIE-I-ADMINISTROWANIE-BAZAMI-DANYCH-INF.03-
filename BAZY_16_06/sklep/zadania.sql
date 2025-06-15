@@ -21,8 +21,12 @@ WHERE categories.category_name = 'Elektronika';
 -- Zadanie 4. Znajdź średnią wartość zamówienia (total_amount).
 SELECT ROUND(AVG(total_amount), 2) AS avg_order_value FROM orders; 
 
-Zadanie 5.
-Wypisz klientów, którzy złożyli zamówienia w czerwcu 2025 roku.
+-- Zadanie 5. Wypisz klientów, którzy złożyli zamówienia w czerwcu 2025 roku.
+SELECT DISTINCT customers.customer_id, customers.first_name, customers.last_name
+FROM customers
+JOIN orders ON customers.customer_id = orders.customer_id
+WHERE orders.order_date BETWEEN '2025-06-01' AND '2025-06-30';
+
 
 Zadanie 6.
 Znajdź 5 najdroższych produktów.
