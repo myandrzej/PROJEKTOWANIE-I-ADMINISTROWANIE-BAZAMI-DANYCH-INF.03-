@@ -80,20 +80,21 @@ SELECT * FROM customers WHERE last_name LIKE 'K%';
 -- Zadanie 13. Znajdź produkty, których nazwa zawiera słowo "Laptop".
 SELECT * FROM products WHERE name LIKE '%Laptop%';
 
-Zadanie 14.
-Oblicz łączną wartość zamówień złożonych przez klienta o customer_id = 2.
+-- Zadanie 14. Oblicz łączną wartość zamówień złożonych przez klienta o customer_id = 2.
+SELECT SUM(total_amount) AS total_spent FROM orders WHERE customer_id = 2; 
 
-Zadanie 15. Znajdź 5 produktów z największym stanem magazynowym.
+-- Zadanie 15. Znajdź 5 produktów z największym stanem magazynowym.
+SELECT * FROM products ORDER BY stock_quantity DESC LIMIT 5;
 
+-- Zadanie 16. Wyświetl wszystkie kategorie posortowane alfabetycznie.
+SELECT * FROM categories ORDER BY category_name;
 
-Zadanie 16.
-Wyświetl wszystkie kategorie posortowane alfabetycznie.
+-- Zadanie 17. Znajdź zamówienia z datą późniejszą niż 2025-06-15 i wyświetl ich kwoty.
+SELECT * FROM orders WHERE order_date > '2025-06-15';
 
-Zadanie 17.
-Znajdź zamówienia z datą późniejszą niż 2025-06-15 i wyświetl ich kwoty.
+-- Zadanie 18. Wyświetl klientów, których e-mail zawiera domenę "example.com".
+SELECT * FROM customers WHERE email LIKE '%@example.com';
 
-Zadanie 18.
-Wyświetl klientów, których e-mail zawiera domenę "example.com".
 
 Zadanie 19.
 Znajdź produkty, których cena jest pomiędzy 100 a 500.
