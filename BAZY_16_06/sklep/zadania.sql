@@ -18,8 +18,8 @@ JOIN products ON order_items.product_id = products.product_id
 JOIN categories ON products.category = categories.category_id
 WHERE categories.category_name = 'Elektronika';
 
-Zadanie 4.
-Znajdź średnią wartość zamówienia (total_amount).
+-- Zadanie 4. Znajdź średnią wartość zamówienia (total_amount).
+SELECT ROUND(AVG(total_amount), 2) AS avg_order_value FROM orders; 
 
 Zadanie 5.
 Wypisz klientów, którzy złożyli zamówienia w czerwcu 2025 roku.
