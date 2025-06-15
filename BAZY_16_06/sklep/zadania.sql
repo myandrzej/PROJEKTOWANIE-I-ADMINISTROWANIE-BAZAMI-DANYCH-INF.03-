@@ -1,11 +1,22 @@
-Zadanie 1.
-Pokaż zamówienia z sumą wartości pozycji w zamówieniu, a następnie porównaj z wartością total_amount w tabeli orders.
+-- Zadanie 1. Pokaż zamówienia z sumą wartości pozycji w zamówieniu, a następnie porównaj z wartością total_amount w tabeli orders.
+SELECT o.order_id, o.total_amount, SUM(oi.price * oi.quantity) AS sum_order_items
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id, o.total_amount;
 
-Zadanie 2.
-Wyświetl listę zamówień z nazwiskami klientów i datą zamówienia.
+-- Zadanie 2. Wyświetl listę zamówień z nazwiskami klientów i datą zamówienia.
+SELECT o.order_id, c.first_name, c.last_name, o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id;
 
-Zadanie 3.
-Znajdź klientów, którzy kupili produkty z kategorii 'Elektronika'.
+-- Zadanie 3. Znajdź klientów, którzy kupili produkty z kategorii 'Elektronika'.
+SELECT DISTINCT customers.customer_id, customers.first_name, customers.last_name
+FROM customers
+JOIN orders ON customers.customer_id = orders.customer_id
+JOIN order_items ON orders.order_id = order_items.order_id
+JOIN products ON order_items.product_id = products.product_id
+JOIN categories ON products.category = categories.category_id
+WHERE categories.category_name = 'Elektronika';
 
 Zadanie 4.
 Znajdź średnią wartość zamówienia (total_amount).
