@@ -37,18 +37,23 @@ WHERE orders.order_date BETWEEN '2025-06-01' AND '2025-06-30'
 GROUP BY customers.customer_id;
 
 
--- Zadanie 6. - Znajdź 5 najdroższych produktów.
+-- Zadanie 6. Znajdź 5 najdroższych produktów.
 SELECT * FROM products ORDER BY price DESC LIMIT 5;
 
 
-Zadanie 7.
-Wyświetl produkty, których stan magazynowy jest mniejszy niż 20.
+-- Zadanie 7. Wyświetl produkty, których stan magazynowy jest mniejszy niż 20.
+SELECT * FROM products WHERE stock_quantity < 20;
 
-Zadanie 8.
-Znajdź kategorię z największą liczbą produktów.
+-- Zadanie 8. Znajdź kategorię z największą liczbą produktów.
+SELECT categories.category_name, COUNT(*) AS product_count
+FROM products
+JOIN categories ON products.category = categories.category_id
+GROUP BY categories.category_name
+ORDER BY product_count DESC
+LIMIT 1;
 
-Zadanie 9.
-Wyświetl klientów i sumę wartości ich zamówień.
+
+Zadanie 9. Wyświetl klientów i sumę wartości ich zamówień.
 
 Zadanie 10.
 Pokaż, ile zamówień zostało złożonych w każdym dniu.
