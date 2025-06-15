@@ -74,17 +74,17 @@ JOIN order_items ON orders.order_id = order_items.order_id
 WHERE order_items.price > 1000;
 
   
-Zadanie 12.
-Wypisz klientów, których nazwisko zaczyna się na literę 'K'.
+-- Zadanie 12. Wypisz klientów, których nazwisko zaczyna się na literę 'K'.
+SELECT * FROM customers WHERE last_name LIKE 'K%';
 
-Zadanie 13.
-Znajdź produkty, których nazwa zawiera słowo "Laptop".
+-- Zadanie 13. Znajdź produkty, których nazwa zawiera słowo "Laptop".
+SELECT * FROM products WHERE name LIKE '%Laptop%';
 
 Zadanie 14.
 Oblicz łączną wartość zamówień złożonych przez klienta o customer_id = 2.
 
-Zadanie 15. 
-Znajdź 5 produktów z największym stanem magazynowym.
+Zadanie 15. Znajdź 5 produktów z największym stanem magazynowym.
+
 
 Zadanie 16.
 Wyświetl wszystkie kategorie posortowane alfabetycznie.
