@@ -22,7 +22,7 @@ LIMIT 1;
 SELECT orders.order_id, orders.order_date, products.name, order_items.quantity, order_items.price
 FROM orders
 JOIN users ON orders.user_id = users.user_id
-JOIN order_items ON order_items.order_id = order_items.order_id
+JOIN order_items ON orders.order_id = order_items.order_id
 JOIN products ON order_items.product_id = products.product_id
 WHERE users.name = 'Jan Kowalski';
 
