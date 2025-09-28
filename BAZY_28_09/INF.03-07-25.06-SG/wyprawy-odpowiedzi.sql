@@ -17,8 +17,8 @@ GROUP BY nazwa;
 
 -- Zapytanie 5: tworzące tabelę klienci z kolumnami:
 -- − id_klienta jako liczba całkowita dodatnia, klucz podstawowy, autoinkrementowany, nie może
--- przyjmować wartości NULL
-- − imie typu tekstowego o długości do 20 znaków
+-- - przyjmować wartości NULL
+-- - imie typu tekstowego o długości do 20 znaków
 -- − nazwisko typu tekstowego o długości do 40 znaków
 -- − data_ur typu data
 
