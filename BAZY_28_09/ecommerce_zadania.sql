@@ -52,4 +52,8 @@ GROUP BY users.user_id, users.name
 ORDER BY total_spent DESC
 LIMIT 3;
 
-10. Produkty, których stan magazynowy jest mniejszy niż 15 sztuk.
+--10. Produkty, których stan magazynowy jest mniejszy niż 15 sztuk.
+SELECT product_id, name, stock
+FROM products
+WHERE stock < 15;
+
