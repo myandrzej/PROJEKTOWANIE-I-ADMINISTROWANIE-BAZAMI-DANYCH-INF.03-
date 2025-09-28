@@ -17,7 +17,15 @@ JOIN products ON order_items.product_id = products.product_id
 GROUP BY products.product_id, products.name
 ORDER BY total DESC
 LIMIT 1;
-5. Zamówienia użytkownika „Jan Kowalski” wraz z listą produktów.
+
+--5. Zamówienia użytkownika „Jan Kowalski” wraz z listą produktów.
+SELECT orders.order_id, orders.order_date, products.name, order_items.quantity, order_items.price
+FROM orders
+JOIN users ON orders.user_id = users.user_id
+JOIN order_items ON order_items.order_id = order_items.order_id
+JOIN products ON order_items.product_id = products.product_id
+WHERE users.name = 'Jan Kowalski';
+
 6. Użytkownicy, którzy złożyli więcej niż 1 zamówienie.
 7. Łączna wartość wszystkich zamówień w kwietniu 2023.
 8. Produkty, które nigdy nie zostały ocenione (brak review).
