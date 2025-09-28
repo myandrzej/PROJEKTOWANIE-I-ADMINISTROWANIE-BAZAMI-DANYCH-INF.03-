@@ -26,7 +26,12 @@ JOIN order_items ON orders.order_id = order_items.order_id
 JOIN products ON order_items.product_id = products.product_id
 WHERE users.name = 'Jan Kowalski';
 
-6. Użytkownicy, którzy złożyli więcej niż 1 zamówienie.
+--6. Użytkownicy, którzy złożyli więcej niż 1 zamówienie.
+SELECT users.user_id, users.name, COUNT(orders.order_id) AS orders_count
+FROM users 
+JOIN orders  ON users.user_id = orders.user_id
+GROUP BY users.user_id, users.name
+HAVING COUNT(orders.order_id) > 1;
 7. Łączna wartość wszystkich zamówień w kwietniu 2023.
 8. Produkty, które nigdy nie zostały ocenione (brak review).
 9. TOP 3 użytkowników z największymi wydatkami.
