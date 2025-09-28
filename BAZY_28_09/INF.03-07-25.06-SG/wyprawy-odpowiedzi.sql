@@ -21,4 +21,9 @@ GROUP BY nazwa;
 -- - imie typu tekstowego o długości do 20 znaków
 -- − nazwisko typu tekstowego o długości do 40 znaków
 -- − data_ur typu data
-
+CREATE TABLE klienci (
+    id_klienta INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    imie VARCHAR(20),
+    nazwisko VARCHAR(40),
+    data_ur DATE
+);
