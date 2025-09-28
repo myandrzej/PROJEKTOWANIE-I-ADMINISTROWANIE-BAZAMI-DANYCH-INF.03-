@@ -9,7 +9,14 @@ SELECT products.product_id, products.name, AVG(reviews.rating) AS avg_rating
 FROM products
 JOIN reviews ON products.product_id = reviews.product_id
 GROUP BY products.product_id, products.name;
-4. Najczęściej kupowany produkt (po ilości).
+
+--4. Najczęściej kupowany produkt (po ilości).
+SELECT products.product_id, products.name, SUM(order_items.quantity) AS total
+FROM order_items
+JOIN products ON order_items.product_id = products.product_id
+GROUP BY products.product_id, products.name
+ORDER BY total DESC
+LIMIT 1;
 5. Zamówienia użytkownika „Jan Kowalski” wraz z listą produktów.
 6. Użytkownicy, którzy złożyli więcej niż 1 zamówienie.
 7. Łączna wartość wszystkich zamówień w kwietniu 2023.
