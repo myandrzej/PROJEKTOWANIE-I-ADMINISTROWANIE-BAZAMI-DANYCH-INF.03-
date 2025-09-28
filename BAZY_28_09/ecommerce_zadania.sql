@@ -43,5 +43,13 @@ SELECT products.product_id, products.name
 FROM products 
 JOIN reviews ON products.product_id = reviews.product_id
 WHERE reviews.review_id IS NULL;
-9. TOP 3 użytkowników z największymi wydatkami.
+
+--9. TOP 3 użytkowników z największymi wydatkami.
+SELECT users.user_id, users.name, SUM(orders.total_amount) AS total_spent
+FROM users
+JOIN orders ON users.user_id = orders.user_id
+GROUP BY users.user_id, users.name
+ORDER BY total_spent DESC
+LIMIT 3;
+
 10. Produkty, których stan magazynowy jest mniejszy niż 15 sztuk.
