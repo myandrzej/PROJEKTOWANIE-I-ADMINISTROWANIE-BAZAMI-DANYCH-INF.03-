@@ -32,7 +32,12 @@ FROM users
 JOIN orders  ON users.user_id = orders.user_id
 GROUP BY users.user_id, users.name
 HAVING COUNT(orders.order_id) > 1;
-7. Łączna wartość wszystkich zamówień w kwietniu 2023.
+
+--7. Łączna wartość wszystkich zamówień w kwietniu 2023.
+SELECT SUM(total_amount) AS total_april_ 
+FROM orders 
+WHERE order_date LIKE '2023-04-%'; 
+
 8. Produkty, które nigdy nie zostały ocenione (brak review).
 9. TOP 3 użytkowników z największymi wydatkami.
 10. Produkty, których stan magazynowy jest mniejszy niż 15 sztuk.
