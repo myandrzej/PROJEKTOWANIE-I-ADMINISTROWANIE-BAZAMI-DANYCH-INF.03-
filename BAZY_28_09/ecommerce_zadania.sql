@@ -1,4 +1,4 @@
-1. Lista wszystkich użytkowników, którzy zarejestrowali się w 2023 roku.
+--1. Lista wszystkich użytkowników, którzy zarejestrowali się w 2023 roku.
 2. Produkty z kategorii „Elektronika” droższe niż 3000 zł.
 3. Średnia ocena (rating) dla każdego produktu.
 4. Najczęściej kupowany produkt (po ilości).
