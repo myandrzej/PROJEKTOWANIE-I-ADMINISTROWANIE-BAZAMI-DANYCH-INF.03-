@@ -1,6 +1,14 @@
 --1. Lista wszystkich użytkowników, którzy zarejestrowali się w 2023 roku.
-2. Produkty z kategorii „Elektronika” droższe niż 3000 zł.
-3. Średnia ocena (rating) dla każdego produktu.
+SELECT * FROM users WHERE YEAR(registration_date) = 2023; 
+
+--2. Produkty z kategorii „Elektronika” droższe niż 3000 zł.
+SELECT * FROM products WHERE category = 'Elektronika' AND price > 3000;
+
+--3. Średnia ocena (rating) dla każdego produktu.
+SELECT products.product_id, products.name, AVG(reviews.rating) AS avg_rating
+FROM products
+JOIN reviews ON products.product_id = reviews.product_id
+GROUP BY products.product_id, products.name;
 4. Najczęściej kupowany produkt (po ilości).
 5. Zamówienia użytkownika „Jan Kowalski” wraz z listą produktów.
 6. Użytkownicy, którzy złożyli więcej niż 1 zamówienie.
