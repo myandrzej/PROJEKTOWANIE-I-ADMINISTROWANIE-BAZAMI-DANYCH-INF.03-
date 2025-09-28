@@ -38,6 +38,10 @@ SELECT SUM(total_amount) AS total_april_
 FROM orders 
 WHERE order_date LIKE '2023-04-%'; 
 
-8. Produkty, które nigdy nie zostały ocenione (brak review).
+--8. Produkty, które nigdy nie zostały ocenione (brak review).
+SELECT products.product_id, products.name
+FROM products 
+JOIN reviews ON products.product_id = reviews.product_id
+WHERE reviews.review_id IS NULL;
 9. TOP 3 użytkowników z największymi wydatkami.
 10. Produkty, których stan magazynowy jest mniejszy niż 15 sztuk.
